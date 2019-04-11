@@ -6,18 +6,22 @@
 </head>
 <body>
    <?php
-    $pass = [
-        'Laura' => '25648',
-        'Daniela' => '334455',
+    $usuarios = [
+        'Laura' => '4567',
+        'Daniela' => '1234',
+        'Natalia' => '9632'
     ];
 
-<?php
-    if($_POST){
-        $nombre = $_POST ['nombre'];
-        $apellido = $_POST ['apellido'];
-        $edad = $_POST ['edad'];
-        echO "<br>";
-        echO "$nombre $apellido $edad";
+ if (isset ($usuarios[$_POST['usuario']])){
+     if ($uduarios[$_POST['usuario']] == $_POST['contrasena']){
+         session_start();
+         
+         
+        echO "<h2> <center> Usuarios activos </center></h2>";
+                  
+        echO "<h3> Usuarios por defecto: </h3>";
+         
+        print_r ($usuarios);
 }
 
 ?>
